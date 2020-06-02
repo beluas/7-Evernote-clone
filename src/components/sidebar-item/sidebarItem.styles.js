@@ -4,6 +4,7 @@ const styles = (theme) => ({
 	},
 	textSection: {
 		maxWidth: "85%",
+		width: "100%",
 	},
 	deleteIcon: {
 		position: "absolute",

@@ -12,6 +12,24 @@ class Editor extends Component {
 		id: "",
 	};
 
+	componentDidMount() {
+		this.setState({
+			text: this.props.selectedNote.body,
+			title: this.props.selectedNote.title,
+			id: this.props.selectedNote.id,
+		});
+	}
+
+	componentDidUpdate() {
+		if (this.props.selectedNote.id !== this.state.id) {
+			this.setState({
+				text: this.props.selectedNote.body,
+				title: this.props.selectedNote.title,
+				id: this.props.selectedNote.id,
+			});
+		}
+	}
+
 	updateBody = async (value) => {
 		await this.setState({ text: value });
 		this.update();
@@ -19,14 +37,30 @@ class Editor extends Component {
 
 	// Update only when the user stop typing for 1.5 seconds
 	update = debounce(() => {
-		console.log("updating db");
+		this.props.noteUpdate(this.state.id, {
+			title: this.state.title,
+			body: this.state.text,
+		});
 	}, 1500);
+
+	updateTitle = async (text) => {
+		await this.setState({ title: text });
+		this.update();
+	};
 
 	render() {
 		const { classes } = this.props;
 
 		return (
 			<div className={classes.editorContainer}>
+				<BorderColorIcon className={classes.editIcon}></BorderColorIcon>
+				<input
+					className={classes.titleInput}
+					placeholder="Note title..."
+					value={this.state.title ? this.state.title : ""}
+					type="text"
+					onChange={(e) => this.updateTitle(e.target.value)}
+				/>
 				<ReactQuill
 					onChange={this.updateBody}
 					value={this.state.text}

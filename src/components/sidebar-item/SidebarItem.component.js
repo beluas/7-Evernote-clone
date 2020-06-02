@@ -7,14 +7,15 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { removeHTMLTags } from "../../helper";
 
 class SidebarItem extends Component {
-	selectNote = (n, i) => {
-		this.props.selectNote(n, i);
+	selectNote = (note, index) => {
+		this.props.selectNote(note, index);
 	};
 	deleteNote = (note) => {
 		if (window.confirm(`Are you sure you want to delete ${note.title}`)) {
 			this.props.deleteNote(note);
 		}
 	};
+
 	render() {
 		const { index, note, classes, selectedNoteIndex } = this.props;
 

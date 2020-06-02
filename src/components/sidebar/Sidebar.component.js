@@ -20,14 +20,15 @@ class Sidebar extends Component {
 	};
 
 	newNote = () => {
-		console.log(this.state);
+		this.props.newNote(this.state.title);
+		this.setState({ title: null, addingNote: false });
 	};
 
-	selectNote = () => {
-		console.log("Select Note");
+	selectNote = (note, index) => {
+		this.props.selectNote(note, index);
 	};
-	deleteNote = () => {
-		console.log("Delete Note");
+	deleteNote = (note) => {
+		this.props.deleteNote(note);
 	};
 
 	render() {
@@ -66,7 +67,7 @@ class Sidebar extends Component {
 								<div key={i}>
 									<SidebarItem
 										note={note}
-										i={i}
+										index={i}
 										selectedNoteIndex={selectedNoteIndex}
 										selectNote={this.selectNote}
 										deleteNote={this.deleteNote}
