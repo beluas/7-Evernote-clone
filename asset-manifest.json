@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/7-Evernote-clone/static/css/main.9e8d25d4.chunk.css",
+    "main.js": "/7-Evernote-clone/static/js/main.18cb56fd.chunk.js",
+    "main.js.map": "/7-Evernote-clone/static/js/main.18cb56fd.chunk.js.map",
+    "runtime-main.js": "/7-Evernote-clone/static/js/runtime-main.52e126a9.js",
+    "runtime-main.js.map": "/7-Evernote-clone/static/js/runtime-main.52e126a9.js.map",
+    "static/js/2.51b016bf.chunk.js": "/7-Evernote-clone/static/js/2.51b016bf.chunk.js",
+    "static/js/2.51b016bf.chunk.js.map": "/7-Evernote-clone/static/js/2.51b016bf.chunk.js.map",
+    "index.html": "/7-Evernote-clone/index.html",
+    "precache-manifest.9e2bc3ff90da33c56706b66debbb14b8.js": "/7-Evernote-clone/precache-manifest.9e2bc3ff90da33c56706b66debbb14b8.js",
+    "service-worker.js": "/7-Evernote-clone/service-worker.js",
+    "static/css/main.9e8d25d4.chunk.css.map": "/7-Evernote-clone/static/css/main.9e8d25d4.chunk.css.map",
+    "static/js/2.51b016bf.chunk.js.LICENSE.txt": "/7-Evernote-clone/static/js/2.51b016bf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52e126a9.js",
+    "static/js/2.51b016bf.chunk.js",
+    "static/css/main.9e8d25d4.chunk.css",
+    "static/js/main.18cb56fd.chunk.js"
+  ]
+}
